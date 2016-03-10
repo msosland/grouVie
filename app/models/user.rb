@@ -4,4 +4,6 @@ class User < ActiveRecord::Base
   has_many :comments
   has_many :participations
   has_many :challenges, through: :participations
+
+  has_secure_password
 end
