@@ -1,6 +1,6 @@
-class CreateParticipants < ActiveRecord::Migration
+class CreateParticipations < ActiveRecord::Migration
   def change
-    create_table :participants do |t|
+    create_table :participations do |t|
       t.references :user
       t.references :challenge
       t.boolean :completed, :default => false
