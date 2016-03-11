@@ -1,13 +1,25 @@
 Rails.application.routes.draw do
   root 'users#index'
-  resources :users
-
-
-
-  resources :articles do
-    resources :comments, only: [:index, :new, :create]
+  resources :users do
+    resources :groups, only: [:index, :new, :create]
+    resources :memberships
   end
-  resources :comments, only: [:show, :edit, :update, :destroy]
+
+  resources :groups, except: [:index, :new, :create] do
+    resources :challenges, only: [:index, :new, :create]
+  end
+
+  resources :challenges, except: [:index, :new, :create] do
+    resources :participations
+  end
+
+
+
+
+  # resources :articles do
+  #   resources :comments, only: [:index, :new, :create]
+  # end
+  # resources :comments, only: [:show, :edit, :update, :destroy]
   # get '/post_image' => 'users#post_image'
 
   # The priority is based upon order of creation: first created -> highest priority.
