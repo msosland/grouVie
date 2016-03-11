@@ -4,4 +4,4 @@ marshall = User.create!(username: 'marshall', password: 'password', email, email
 mike = User.create!(username: 'mike', password: 'password', email, email: 'mike@mail.com')
 lauren = User.create!(username: 'lauren', password: 'password', email, email: 'lauren@mail.com')
 
-
+marshall.groups.create(name: 'Team Grouvie')
