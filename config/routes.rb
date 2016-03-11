@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  root 'users#index'
+  resources :users
+
+
+
+  resources :articles do
+    resources :comments, only: [:index, :new, :create]
+  end
+  resources :comments, only: [:show, :edit, :update, :destroy]
+  # get '/post_image' => 'users#post_image'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
