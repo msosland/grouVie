@@ -1,7 +1,4 @@
 class UsersController < ApplicationController
-  # s3 = Aws::S3::Resource.new(region:'us-west-2')
-  # obj = s3.bucket('bucket-name').object('key')
-  # obj.upload_file('/path/to/source/file')
   def index
     @user = User.new
   end
@@ -10,15 +7,16 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to 'root'
+      redirect_to '/'
      else
-       redirect_to 'root'
+      puts
+       redirect_to '/'
     end
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:image, :name)
+    params.require(:user).permit(:image, :username, :email, :password)
   end
 end

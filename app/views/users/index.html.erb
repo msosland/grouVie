@@ -4,6 +4,14 @@
     <%= f.text_field :username %>
   </div>
   <div class="field">
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
     <%= f.label :image %>
     <%= f.file_field :image %>
   </div>
@@ -11,4 +19,5 @@
     <%= f.submit 'Make a friend' %>
     <%= link_to 'Nevermind', users_path, class: 'button' %>
   </div>
+  <% puts params %>
 <% end %>
