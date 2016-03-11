@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.0.0"
+ruby "2.2.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.2'
@@ -22,10 +22,13 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+#Use AWS as image hosting
+gem 'aws-sdk', '< 2.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem "paperclip", "~> 4.3"    # paperclip gem for file management
+# gem 'dotenv-rails', :groups => [:development, :test]  # env variable to keep sensitive data hidden
 # Use Unicorn as the app server
 # gem 'unicorn'
 
