@@ -1,3 +1,14 @@
-<script type="text/javascript">
-
-</script>
+<%= form_for(@user, multipart: true) do |f| %>
+  <div class="field">
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Make a friend' %>
+    <%= link_to 'Nevermind', users_path, class: 'button' %>
+  </div>
+<% end %>
