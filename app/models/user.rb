@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   validates_attachment :image, :content_type => {:content_type => /^image\/(jpeg|png|gif|tiff)$/}
 
   def as_json(options={})
-    super(options).merge(image_url: image.url, groups: groups)
+    super(options).merge(image_url: image.url, memberships: memberships)
   end
 
 end

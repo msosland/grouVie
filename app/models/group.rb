@@ -6,6 +6,6 @@ class Group < ActiveRecord::Base
   has_many :members, through: :memberships, source: :user
 
   def as_json(options={})
-    super(options).merge(challenges: challenges)
+    super(options).merge(challenges: challenges, comments: comments, members: members)
   end
 end
