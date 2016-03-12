@@ -4,7 +4,7 @@ class Challenge < ActiveRecord::Base
   has_many :participants, through: :participations, source: :user
 
   def as_json(options={})
-    super(options).merge(participants: participants, participations: participations)
+    super(options).merge(participations: participations)
   end
 end
 
