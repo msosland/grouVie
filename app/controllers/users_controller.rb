@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
 
   def new
+    #new user form
   end
 
   def create
