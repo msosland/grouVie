@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
       #on frontend, render user profile page using user.id
     else
       render json: @user.errors, status: 412
+    end
   end
 
   def logout
