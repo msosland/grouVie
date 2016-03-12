@@ -1,4 +1,4 @@
-class Participant < ActiveRecord::Base
+class Participation < ActiveRecord::Base
   belongs_to :user
   belongs_to :challenge
 end

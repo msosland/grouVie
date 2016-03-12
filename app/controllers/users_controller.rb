@@ -3,15 +3,30 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def new
+  end
+
   def create
     @user = User.new(user_params)
-
     if @user.save
-      redirect_to '/'
-     else
-      puts
-       redirect_to '/'
+      render json: @user
+    else
+      render json: @user.errors, status: 412
     end
+  end
+
+  def show #/users/:id
+    @user = User.find(params[:id])
+    render json: @user.groups
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
   end
 
   private
