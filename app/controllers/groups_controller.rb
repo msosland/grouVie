@@ -1,5 +1,7 @@
 class GroupsController < ApplicationController
   def index
+    @groups = User.find(params[:user_id]).groups
+    render json: @groups
   end
 
   def new
