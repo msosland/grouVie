@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'users#index'
-  get '/login' => 'login#login'
-  get '/logout' => 'login#logout'
+  get '/login' => 'sessions#login'
+  get '/logout' => 'sessions#logout'
 
   resources :users do
     resources :groups, only: [:index, :new, :create]

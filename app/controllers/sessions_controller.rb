@@ -1,4 +1,4 @@
-class LoginController < ApplicationController
+class SessionsController < ApplicationController
   def login
     #pass user_id to javascript front-end
   end
