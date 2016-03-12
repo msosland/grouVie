@@ -9,6 +9,8 @@ class GroupsController < ApplicationController
   end
 
   def show
+    @group = Group.find(params[:id])
+    render json: @group
   end
 
   def edit

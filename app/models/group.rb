@@ -4,4 +4,8 @@ class Group < ActiveRecord::Base
   has_many :challenges
   has_many :memberships
   has_many :members, through: :memberships, source: :user
+
+  def as_json(options={})
+    super(options).merge(challenges: challenges)
+  end
 end

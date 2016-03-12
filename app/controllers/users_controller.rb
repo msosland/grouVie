@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
 
   def new
+    #new user form
   end
 
   def create
@@ -17,7 +18,7 @@ class UsersController < ApplicationController
 
   def show #/users/:id
     @user = User.find(params[:id])
-    render json: @user.groups
+    render json: @user
   end
 
   def edit

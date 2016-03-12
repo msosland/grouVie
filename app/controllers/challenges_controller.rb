@@ -9,6 +9,8 @@ class ChallengesController < ApplicationController
   end
 
   def show
+    @challenge = Challenge.find(params[:id])
+    render json: @challenge
   end
 
   def edit
