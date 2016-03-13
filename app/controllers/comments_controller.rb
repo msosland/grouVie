@@ -6,6 +6,14 @@ class CommentsController < ApplicationController
   end
 
   def create
+    p "==================="
+    p comment_params
+    @comment = Comment.new(comment_params)
+    if @comment.save
+      render json: @comment
+    else
+      render json: @comment.errors, status: 412
+    end
   end
 
   def show
@@ -19,4 +27,9 @@ class CommentsController < ApplicationController
 
   def destroy
   end
+
+  private
+    def comment_params
+      params.require(:comment).permit(:content)
+    end
 end

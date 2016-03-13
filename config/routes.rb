@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :groups, except: [:index, :new, :create] do
     resources :challenges, only: [:index, :new, :create]
+    resources :comments, only: [:index, :new, :create]
   end
 
   resources :challenges, except: [:index, :new, :create] do
