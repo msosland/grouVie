@@ -6,12 +6,14 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.new(content: params[:body])
-    if @comment.save
-      render json: @comment
-    else
-      render json: @comment.errors, status: 412
-    end
+    @comment = params[:body]
+    render json: @comment
+    # @comment = Comment.new(content: params[:body])
+    # if @comment.save
+    #   render json: @comment
+    # else
+    #   render json: @comment.errors, status: 412
+    # end
   end
 
   def show
