@@ -6,9 +6,7 @@ class CommentsController < ApplicationController
   end
 
   def create
-    p "==================="
-    p comment_params
-    @comment = Comment.new(comment_params)
+    @comment = Comment.new(content: params[:body])
     if @comment.save
       render json: @comment
     else
