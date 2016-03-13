@@ -8,7 +8,10 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.new(content: eval(params.keys[0]), group_id: params["group_id"].to_i, user_id: 5)
+    comment = JSON.parse(params.keys[0])["comment"]
+    user_id = JSON.parse(params.keys[0])["userId"].to_i
+
+    @comment = Comment.new(content: comment, group_id: params["group_id"].to_i, user_id: user_id)
     if @comment.save
       render json: @comment
     else
