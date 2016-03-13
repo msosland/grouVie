@@ -1,4 +1,6 @@
+require 'json'
 class CommentsController < ApplicationController
+  skip_before_filter  :verify_authenticity_token
   def index
   end
 
@@ -6,14 +8,12 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = body
-    render json: @comment
-    # @comment = Comment.new(content: params[:body])
-    # if @comment.save
-    #   render json: @comment
-    # else
-    #   render json: @comment.errors, status: 412
-    # end
+    @comment = Comment.new(content: eval(params.keys[0]), group_id: params["group_id"].to_i, user_id: 5)
+    if @comment.save
+      render json: @comment
+    else
+      render json: @comment.errors, status: 412
+    end
   end
 
   def show
