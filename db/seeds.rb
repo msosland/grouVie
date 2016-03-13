@@ -1,4 +1,9 @@
 # Users
+User.delete_all
+Group.delete_all
+Challenge.delete_all
+Comment.delete_all
+
 alana = User.create!(username: 'alana', password: 'password', email: 'alana@mail.com')
 marshall = User.create!(username: 'marshall', password: 'password', email: 'marshall@mail.com')
 mike = User.create!(username: 'mike', password: 'password', email: 'mike@mail.com')
