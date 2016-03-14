@@ -131,7 +131,7 @@ mike.comments.create!(group: group6, content: "Sup")
 alana.comments.create!(group: group6, content: "Yo")
 
 
-clip_art = ['http://worldartsme.com/images/fall-squirrel-clipart-1.jpg', 'http://clipartbold.com/wp-content/uploads/2016/02/Cute-squirrel-cartoon-clipart-image-5.png', 'http://clipartion.com/wp-content/uploads/2015/11/running-squirrel-clipart.png', 'http://images.clipartpanda.com/squirrel-clipart-cartoon_squirrel_with_an_acorn_nut_0071-0908-3116-2318_SMU.jpg', 'http://comps.canstockphoto.com/can-stock-photo_csp13648213.jpg']
+clip_art = ['http://worldartsme.com/images/fall-squirrel-clipart-1.jpg', 'http://clipartbold.com/wp-content/uploads/2016/02/Cute-squirrel-cartoon-clipart-image-5.png', 'http://clipartion.com/wp-content/uploads/2015/11/running-squirrel-clipart.png', 'http://images.clipartpanda.com/squirrel-clipart-cartoon_squirrel_with_an_acorn_nut_0071-0908-3116-2318_SMU.jpg', 'http://comps.canstockphoto.com/can-stock-photo_csp13648213.jpg', 'http://worldartsme.com/images/fall-squirrel-clipart-1.jpg', 'http://clipartbold.com/wp-content/uploads/2016/02/Cute-squirrel-cartoon-clipart-image-5.png', 'http://clipartion.com/wp-content/uploads/2015/11/running-squirrel-clipart.png', 'http://images.clipartpanda.com/squirrel-clipart-cartoon_squirrel_with_an_acorn_nut_0071-0908-3116-2318_SMU.jpg', 'http://comps.canstockphoto.com/can-stock-photo_csp13648213.jpg']
 
 completed_challenges = Participation.all.sample(10)
 
