@@ -1,13 +1,30 @@
+require 'open-uri'
+
 # Users
 User.delete_all
 Group.delete_all
 Challenge.delete_all
 Comment.delete_all
+Participation.delete_all
+Membership.delete_all
 
 alana = User.create!(username: 'alana', password: 'password', email: 'alana@mail.com')
+alana.image = open('https://github.com/tomorrow-lauren/lauren-doodle/blob/master/jpg/alana.jpg?raw=true')
+alana.save
+
 marshall = User.create!(username: 'marshall', password: 'password', email: 'marshall@mail.com')
+marshall.image = open('https://github.com/tomorrow-lauren/lauren-doodle/blob/master/jpg/marshall.jpg?raw=true')
+marshall.save
+
 mike = User.create!(username: 'mike', password: 'password', email: 'mike@mail.com')
+mike.image = open('https://github.com/tomorrow-lauren/lauren-doodle/blob/master/jpg/mike.jpg?raw=true')
+mike.save
+
 lauren = User.create!(username: 'lauren', password: 'password', email: 'lauren@mail.com')
+lauren.image = open('https://s-media-cache-ak0.pinimg.com/564x/e9/d7/72/e9d7723b0410dcc64c0f6a0e7968e822.jpg')
+lauren.save
+
+
 
 group = marshall.created_groups.create(name: 'Team Grouvie')
 group2 = mike.created_groups.create(name: 'Squirrels')
@@ -45,3 +62,13 @@ mike.comments.create!(group: group2, content: "I plan on cleaning the fridge wel
 lauren.comments.create!(group: group3, content: "Can't wait to watch the Walking Dead first!")
 alana.comments.create!(group: group3, content: "Can you guys finally finish the episode?")
 marshall.comments.create!(group: group3, content: "That was amazing!")
+
+clip_art = ['http://worldartsme.com/images/fall-squirrel-clipart-1.jpg', 'http://clipartbold.com/wp-content/uploads/2016/02/Cute-squirrel-cartoon-clipart-image-5.png', 'http://clipartion.com/wp-content/uploads/2015/11/running-squirrel-clipart.png', 'http://images.clipartpanda.com/squirrel-clipart-cartoon_squirrel_with_an_acorn_nut_0071-0908-3116-2318_SMU.jpg', 'http://comps.canstockphoto.com/can-stock-photo_csp13648213.jpg']
+
+completed_challenges = Participation.all.sample(5)
+
+completed_challenges.each_with_index do |participation, index|
+  participation.completed = true
+  participation.image = open(clip_art[index])
+  participation.save
+end
