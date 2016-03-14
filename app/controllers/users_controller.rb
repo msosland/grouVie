@@ -13,7 +13,8 @@ class UsersController < ApplicationController
     if @user.save
       render json: @user
     else
-      render status: 412
+      # puts @user.errors.full_messages.to_json
+      render json: @user.errors.full_messages, status: 412
     end
   end
 
