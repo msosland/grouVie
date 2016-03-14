@@ -1,12 +1,25 @@
 require 'open-uri'
 
-# Users
 User.delete_all
 Group.delete_all
 Challenge.delete_all
 Comment.delete_all
 Participation.delete_all
 Membership.delete_all
+
+# Users without photos
+maxine = User.create!(username: 'maxine', password: 'password', email: 'maxine@mail.com')
+kim = User.create!(username: 'kim', password: 'password', email: 'kim@mail.com')
+jon = User.create!(username: 'jon', password: 'password', email: 'jon@mail.com')
+kyle = User.create!(username: 'kyle', password: 'password', email: 'kyle@mail.com')
+kristin = User.create!(username: 'kristin', password: 'password', email: 'kristin@mail.com')
+sarah = User.create!(username: 'sarah', password: 'password', email: 'sarah@mail.com')
+colleen = User.create!(username: 'colleen', password: 'password', email: 'colleen@mail.com')
+mark = User.create!(username: 'mark', password: 'password', email: 'mark@mail.com')
+doug = User.create!(username: 'doug', password: 'password', email: 'doug@mail.com')
+paul = User.create!(username: 'paul', password: 'password', email: 'paul@mail.com')
+
+# Users with photos
 
 alana = User.create!(username: 'alana', password: 'password', email: 'alana@mail.com')
 alana.image = open('https://github.com/tomorrow-lauren/lauren-doodle/blob/master/jpg/alana.jpg?raw=true')
@@ -23,7 +36,6 @@ mike.save
 lauren = User.create!(username: 'lauren', password: 'password', email: 'lauren@mail.com')
 lauren.image = open('https://s-media-cache-ak0.pinimg.com/564x/e9/d7/72/e9d7723b0410dcc64c0f6a0e7968e822.jpg')
 lauren.save
-
 
 
 group = marshall.created_groups.create(name: 'Team Grouvie')
