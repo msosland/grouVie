@@ -10,6 +10,14 @@ class ParticipationsController < ApplicationController
   end
 
   def create
+    user_id = JSON.parse(params.keys[0])["userId"].to_i
+    @participation = Participation.new(user_id: user_id, challenge_id: params[:challenge_id])
+
+    if @participation.save
+      render json: @participation
+    else
+      render json: @participation.errors, status: 412
+    end
   end
 
   def show
