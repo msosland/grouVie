@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_filter  :verify_authenticity_token
   def index
     @user = User.new
   end
@@ -8,11 +9,11 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
+    @user = User.new(username: params["username"], email: params["email"], password: params['password'])
     if @user.save
       render json: @user
     else
-      render json: @user.errors, status: 412
+      render status: 412
     end
   end
 
