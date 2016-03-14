@@ -26,7 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'aws-sdk', '< 2.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-
+gem 'dotenv-rails', :groups => [:development, :test]
 gem "paperclip", "~> 4.3"    # paperclip gem for file management
 # gem 'dotenv-rails', :groups => [:development, :test]  # env variable to keep sensitive data hidden
 # Use Unicorn as the app server
