@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
+  post '/challenges/:challenge_id/participations/:id' => 'participations#update'
+
 
   resources :users do
     resources :groups, only: [:index, :new, :create]
@@ -15,7 +17,7 @@ Rails.application.routes.draw do
   end
 
   resources :challenges, except: [:index, :new, :create] do
-    resources :participations
+    resources :participations, except: [:update]
   end
 
 end
