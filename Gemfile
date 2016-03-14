@@ -38,6 +38,8 @@ gem "paperclip", "~> 4.3"    # paperclip gem for file management
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails', '~>2.0'
+  gem 'capybara', '~>2.1.0'
 end
 
 group :development do
