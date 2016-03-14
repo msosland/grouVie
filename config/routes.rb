@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
   post '/challenges/:challenge_id/participations/:id' => 'participations#update'
+  post '/users/:id' => 'users#update'
 
-
-  resources :users do
+  resources :users, except: [:update] do
     resources :groups, only: [:index, :new, :create]
     resources :memberships
   end

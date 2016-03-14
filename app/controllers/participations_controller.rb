@@ -30,7 +30,7 @@ class ParticipationsController < ApplicationController
     image = JSON.parse(params.keys[0])["obj"].gsub(/\n/, '').gsub(' ', '+')
     image_data = Paperclip.io_adapters.for(image)
     @participation = Participation.find(params["id"].to_i)
-    @participation.update(image: image_data)
+    @participation.update(image: image_data, completed: true)
     render json: @participation
   end
 
