@@ -13,8 +13,9 @@ class ChallengesController < ApplicationController
     @user = User.find_by(id: user_id)
 
     @challenge = Challenge.new(name: challenge_name, description: challenge_description, group_id: params["group_id"].to_i)
+    @challenge.participants << @user
+
     if @challenge.save
-      @challenge.participants << @user
       render json: @challenge
     else
       render json: @challenge.errors, status: 412

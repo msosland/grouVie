@@ -8,6 +8,18 @@ class GroupsController < ApplicationController
   end
 
   def create
+    @user = User.find(params[:user_id])
+    @group_name = JSON.parse(params["groupName"])
+    @group = Group.create(name: @group_name)
+
+    @members = JSON.parse(params["groupMembers"])
+    @members.each {|member| @group.members << member}
+
+    if @group.save
+      render json: @group
+    else
+      # render json: @group.errors, status 412
+    end
   end
 
   def show
