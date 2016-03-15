@@ -24,4 +24,12 @@ describe SessionsController do
 				expect(parsed_response["email"]).to eq("jim@mail.com")
 			end
 	end
+
+	describe "GET #logout" do
+		it "removes the session user_id" do
+			# failing, why? no view?
+			get :logout
+			expect(session[:user_id]).to be(nil)
+		end
+	end
 end

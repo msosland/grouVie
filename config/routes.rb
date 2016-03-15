@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'users#index'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
-  get '/logout' => 'sessions#destroy'
+  get '/logout' => 'sessions#logout'
   post '/challenges/:challenge_id/participations/:id' => 'participations#update'
   post '/users/:id' => 'users#update'
 
