@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+  skip_before_filter  :verify_authenticity_token
   def index
     @groups = User.find(params[:user_id]).groups
     render json: @groups
