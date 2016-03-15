@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+  class UsersController < ApplicationController
   skip_before_filter  :verify_authenticity_token
   def index
     @user = User.new

@@ -8,8 +8,9 @@ Rails.application.routes.draw do
 
   resources :users, except: [:update] do
     resources :groups, only: [:index, :new, :create]
-    resources :memberships
   end
+
+  resources :memberships
 
   resources :groups, except: [:index, :new, :create] do
     resources :challenges, only: [:index, :new, :create]

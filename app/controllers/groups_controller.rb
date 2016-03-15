@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+  skip_before_filter  :verify_authenticity_token
   def index
     @groups = User.find(params[:user_id]).groups
     render json: @groups
@@ -9,11 +10,10 @@ class GroupsController < ApplicationController
 
   def create
     @user = User.find(params[:user_id])
-    @group_name = JSON.parse(params["groupName"])
+    @group_name = JSON.parse(params.keys[0])["groupName"]
     @group = Group.create(name: @group_name)
-
-    @members = JSON.parse(params["groupMembers"])
-    @members.each {|member| @group.members << member}
+    @group.creator = @user
+    @group.members << @user
 
     if @group.save
       render json: @group
