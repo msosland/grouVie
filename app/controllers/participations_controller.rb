@@ -27,7 +27,7 @@ class ParticipationsController < ApplicationController
   end
 
   def update
-    image = JSON.parse(params.keys[0])["obj"].gsub(/\n/, '').gsub(' ', '+').gsub(/\"=>\"/, '=')
+    image = JSON.parse(params.keys[0])["obj"].gsub(/\n/, '').gsub(' ', '+').gsub(/\"=>\"/, '').gsub('=', '')
     image_data = Paperclip.io_adapters.for(image)
     @participation = Participation.find(params["id"].to_i)
     @participation.update(image: image_data, completed: true)
