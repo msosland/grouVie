@@ -8,8 +8,10 @@ class MembershipsController < ApplicationController
   end
 
   def create
-    group_id = JSON.parse(params["groupId"])
-    username = JSON.parse(params["username"])
+    puts params
+    # Parameters: {"{\"username\":\"paul\",\"groupId\":4}"=>nil}
+    group_id = JSON.parse(params.keys[0]["groupId"])
+    username = JSON.parse(params.keys[0]["username"])
     @user = User.find_by(username: username)
     if @membership.save
       render json: @user
