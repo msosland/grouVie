@@ -2,7 +2,7 @@ require 'json'
 class CommentsController < ApplicationController
   skip_before_filter  :verify_authenticity_token
   def index
-    @comments = Group.find(params[:group_id].comments)
+    @comments = Group.find(params[:group_id]).comments
     render json: @comments
   end
 
