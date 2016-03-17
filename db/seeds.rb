@@ -22,7 +22,7 @@ mike.image = open('https://github.com/tomorrow-lauren/lauren-doodle/blob/master/
 mike.save
 
 lauren = User.create!(username: 'lauren', password: 'password', email: 'lauren@mail.com')
-lauren.image = open('https://github.com/tomorrow-lauren/lauren-doodle/blob/master/jpg/lauren.jpg')
+lauren.image = open('https://github.com/tomorrow-lauren/lauren-doodle/blob/master/jpg/lauren.jpg?raw=true')
 lauren.save
 
 # Users without photos
@@ -57,7 +57,7 @@ group6.members << [mike, alana, lauren, dan, tiffany]
 challenge1 = group.challenges.create!(name: 'Learn React Native', description: 'Dive into the docs and learn all there is to know!', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 20))
 challenge2 = group.challenges.create!(name: 'Build an App', description: 'Create an app using Rails and React Native to help its users reach goals / take selfies', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 20))
 challenge3 = group.challenges.create!(name: 'Perfect the fast-to-slow clap', description: 'And then add to resume skills.', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 20))
-challenge4 = group2.challenges.create!(name: 'Vacuum the ROR', description: 'Vacuum the entire room and the chairs', start_date: Date.new(2016, 3, 15), end_date: Date.new(2016, 03, 25))
+challenge4 = group.challenges.create!(name: 'Vacuum the ROR', description: 'Vacuum the entire room and the chairs', start_date: Date.new(2016, 3, 15), end_date: Date.new(2016, 03, 25))
 challenge5 = group.challenges.create!(name: 'Demo App!', description: 'Show your creation to the masses.', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 20))
 
 challenge6 = group2.challenges.create!(name: 'Graduate', description: 'But stay in touch.', start_date: Date.new(2016, 1, 18), end_date: Date.new(2016, 03, 25))
@@ -111,10 +111,9 @@ challenge20.participants << [mike, alana, lauren]
 challenge21.participants << [dan, alana, lauren]
 
 alana.comments.create!(group: group, content: 'these docs are so confusing!')
-marshall.comments.create!(group: group, content: "Is it friday yet?")
 lauren.comments.create!(group: group, content: "Errors amiright?")
 
-mike.comments.create!(group: group2, content: "Guys the ROR really needs to be vacuumed")
+mike.comments.create!(group: group, content: "Guys the ROR really needs to be vacuumed")
 tiffany.comments.create!(group: group2, content: "Amazing!")
 
 alana.comments.create!(group: group3, content: "Already ran twice. Come on guys")
