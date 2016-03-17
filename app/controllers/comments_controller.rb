@@ -6,9 +6,6 @@ class CommentsController < ApplicationController
     render json: @comments
   end
 
-  def new
-  end
-
   def create
     comment = JSON.parse(params.keys[0])["comment"]
     user_id = JSON.parse(params.keys[0])["userId"].to_i
@@ -19,18 +16,6 @@ class CommentsController < ApplicationController
     else
       render json: @comment.errors, status: 412
     end
-  end
-
-  def show
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
   end
 
   private

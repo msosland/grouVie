@@ -13,9 +13,6 @@ describe Group do
       expect(group.creator).to eq(User.find_by(username: 'bobjones'))
     end
 
-    pending 'automatically adds creator to group members' do
-      expect(group.members.include? user).to be true
-    end
   end
 
   describe 'as_json' do

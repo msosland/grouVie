@@ -3,11 +3,6 @@ require 'base64'
 
 class ParticipationsController < ApplicationController
   skip_before_filter  :verify_authenticity_token
-  def index
-  end
-
-  def new
-  end
 
   def create
     user_id = JSON.parse(params.keys[0])["userId"].to_i
@@ -20,12 +15,6 @@ class ParticipationsController < ApplicationController
     end
   end
 
-  def show
-  end
-
-  def edit
-  end
-
   def update
     image = JSON.parse(params.keys[0])["obj"].gsub(/\n/, '').gsub(' ', '+').gsub(/\"=>\"/, '').gsub('=', '')
     image_data = Paperclip.io_adapters.for(image)
@@ -34,6 +23,4 @@ class ParticipationsController < ApplicationController
     render json: @participation
   end
 
-  def destroy
-  end
 end
