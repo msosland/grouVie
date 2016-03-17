@@ -31,12 +31,4 @@ describe Participation do
       expect(participation_as_parsed_json["username"]).to eq("bobjones")
     end
   end
-
-  pending 'marks self as completed' do
-    it 'changes completed status to true if participation has a photo uploaded' do
-      # participation.image = open('http://worldartsme.com/images/fall-squirrel-clipart-1.jpg')
-      # participation.save
-      # expect(participation.completed).to be true
-    end
-  end
 end

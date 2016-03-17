@@ -4,10 +4,6 @@
     @user = User.new
   end
 
-  def new
-    #new user form
-  end
-
   def create
     @user = User.new(username: params["username"], email: params["email"], password: params['password'])
     if @user.save
@@ -23,18 +19,12 @@
     render json: @user
   end
 
-  def edit
-  end
-
   def update
     image = JSON.parse(params.keys[0])["obj"].gsub(/\n/, '').gsub(' ', '+')
     image_data = Paperclip.io_adapters.for(image)
     @user = User.find(params["id"].to_i)
     @user.update(image: image_data)
     render json: @user
-  end
-
-  def destroy
   end
 
   private
