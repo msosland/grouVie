@@ -53,15 +53,17 @@ group4.members << [alana, marshall, mike, lauren]
 group5.members << [alana, marshall, mike, mom, dad]
 group6.members << [mike, alana, lauren, dan, tiffany]
 
-challenge = group.challenges.create!(name: 'Build an App', description: 'Create an app using Rails and React Native to help its users reach goals / take selfies', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 20))
-challenge2 = group.challenges.create!(name: 'Learn React Native', description: 'Dive into the docs and learn all there is to know!', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 20))
-challenge3 = group.challenges.create!(name: 'Create seed data', description: 'Make data to help test your new app.', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 20))
-challenge4 = group.challenges.create!(name: 'Demo App!', description: 'Show your creation to the world.', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 20))
 
-challenge5 = group2.challenges.create!(name: 'Graduate', description: 'But stay in touch.', start_date: Date.new(2016, 1, 18), end_date: Date.new(2016, 03, 25))
-challenge6 = group2.challenges.create!(name: 'Do a donut crawl', description: 'Heart donuts', start_date: Date.new(2016, 3, 18), end_date: Date.new(2016, 03, 20))
-challenge7 = group2.challenges.create!(name: 'Perfect the fast-to-slow clap', description: 'And then add to resume skills.', start_date: Date.new(2016, 3, 10), end_date: Date.new(2017, 03, 10))
-challenge8 = group2.challenges.create!(name: 'Vacuum the ROR', description: 'Vacuum the entire room and the chairs', start_date: Date.new(2016, 3, 15), end_date: Date.new(2016, 03, 25))
+challenge1 = group.challenges.create!(name: 'Learn React Native', description: 'Dive into the docs and learn all there is to know!', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 20))
+challenge2 = group.challenges.create!(name: 'Build an App', description: 'Create an app using Rails and React Native to help its users reach goals / take selfies', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 20))
+challenge3 = group.challenges.create!(name: 'Perfect the fast-to-slow clap', description: 'And then add to resume skills.', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 20))
+challenge4 = group2.challenges.create!(name: 'Vacuum the ROR', description: 'Vacuum the entire room and the chairs', start_date: Date.new(2016, 3, 15), end_date: Date.new(2016, 03, 25))
+challenge5 = group.challenges.create!(name: 'Demo App!', description: 'Show your creation to the masses.', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 20))
+
+challenge6 = group2.challenges.create!(name: 'Graduate', description: 'But stay in touch.', start_date: Date.new(2016, 1, 18), end_date: Date.new(2016, 03, 25))
+challenge7 = group2.challenges.create!(name: 'Do a donut crawl', description: 'Heart donuts', start_date: Date.new(2016, 3, 18), end_date: Date.new(2016, 03, 20))
+challenge8 = group2.challenges.create!(name: 'Perfect the fast-to-slow clap', description: 'And then add to resume skills.', start_date: Date.new(2016, 3, 10), end_date: Date.new(2017, 03, 10))
+
 
 challenge9 = group3.challenges.create!(name: 'Run 3 times this week', description: 'Take a run of 20+ minutes 3 times this week', start_date: Date.new(2016, 3, 16), end_date: Date.new(2016, 03, 23))
 challenge10 = group3.challenges.create!(name: 'Swim 100 laps in the pool', description: 'Get fit', start_date: Date.new(2016, 3, 16), end_date: Date.new(2016, 03, 23))
@@ -81,12 +83,12 @@ challenge20 = group6.challenges.create!(name: 'Vote in your primary', descriptio
 challenge21 = group6.challenges.create!(name: 'Sign up for Soccer', description: 'Just do it', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 31))
 
 
-challenge.participants << [alana, marshall, mike, lauren]
-challenge2.participants << [alana, marshall, mike, lauren]
-challenge3.participants << [lauren, alana, mike, marshall]
-challenge4.participants << [alana, mike, marshall, lauren]
+challenge1.participants << [alana, marshall, mike, lauren]
+challenge2.participants << [lauren, marshall, mike, alana]
+challenge3.participants << [lauren, alana, mike]
+challenge4.participants << [alana, mike]
 
-challenge5.participants << [alana, mike, marshall, dan, sabri, tiffany, lauren, ray, catie, meagan, jim, james, tyler, eddie]
+challenge5.participants << [alana, mike, marshall, lauren]
 challenge6.participants << [lauren, dan, sabri, tiffany, mike]
 challenge7.participants << [marshall, alana, lauren, sabri, tiffany]
 challenge8.participants << [alana, marshall, lauren, tiffany]
