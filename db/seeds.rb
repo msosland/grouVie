@@ -18,7 +18,7 @@ marshall.image = open('https://github.com/tomorrow-lauren/lauren-doodle/blob/mas
 marshall.save
 
 mike = User.create!(username: 'mike', password: 'password', email: 'mike@mail.com')
-mike.image = open('https://github.com/tomorrow-lauren/lauren-doodle/blob/master/jpg/mike.jpg?raw=true')
+mike.image = open('http://s3.amazonaws.com/grouvie/users/images/000/000/003/original/data?1458248686')
 mike.save
 
 lauren = User.create!(username: 'lauren', password: 'password', email: 'lauren@mail.com')
@@ -131,12 +131,49 @@ mike.comments.create!(group: group6, content: "Sup")
 alana.comments.create!(group: group6, content: "Yo")
 
 
-clip_art = ['http://worldartsme.com/images/fall-squirrel-clipart-1.jpg', 'http://clipartbold.com/wp-content/uploads/2016/02/Cute-squirrel-cartoon-clipart-image-5.png', 'http://clipartion.com/wp-content/uploads/2015/11/running-squirrel-clipart.png', 'http://images.clipartpanda.com/squirrel-clipart-cartoon_squirrel_with_an_acorn_nut_0071-0908-3116-2318_SMU.jpg', 'http://comps.canstockphoto.com/can-stock-photo_csp13648213.jpg', 'http://worldartsme.com/images/fall-squirrel-clipart-1.jpg', 'http://clipartbold.com/wp-content/uploads/2016/02/Cute-squirrel-cartoon-clipart-image-5.png', 'http://clipartion.com/wp-content/uploads/2015/11/running-squirrel-clipart.png', 'http://images.clipartpanda.com/squirrel-clipart-cartoon_squirrel_with_an_acorn_nut_0071-0908-3116-2318_SMU.jpg', 'http://comps.canstockphoto.com/can-stock-photo_csp13648213.jpg']
+# clip_art = ['http://worldartsme.com/images/fall-squirrel-clipart-1.jpg', 'http://clipartbold.com/wp-content/uploads/2016/02/Cute-squirrel-cartoon-clipart-image-5.png', 'http://clipartion.com/wp-content/uploads/2015/11/running-squirrel-clipart.png', 'http://images.clipartpanda.com/squirrel-clipart-cartoon_squirrel_with_an_acorn_nut_0071-0908-3116-2318_SMU.jpg', 'http://comps.canstockphoto.com/can-stock-photo_csp13648213.jpg', 'http://worldartsme.com/images/fall-squirrel-clipart-1.jpg', 'http://clipartbold.com/wp-content/uploads/2016/02/Cute-squirrel-cartoon-clipart-image-5.png', 'http://clipartion.com/wp-content/uploads/2015/11/running-squirrel-clipart.png', 'http://images.clipartpanda.com/squirrel-clipart-cartoon_squirrel_with_an_acorn_nut_0071-0908-3116-2318_SMU.jpg', 'http://comps.canstockphoto.com/can-stock-photo_csp13648213.jpg']
 
-completed_challenges = Participation.all.sample(10)
+# completed_challenges = Participation.all.sample(10)
 
-completed_challenges.each_with_index do |participation, index|
-  participation.completed = true
-  participation.image = open(clip_art[index])
-  participation.save
-end
+# completed_challenges.each_with_index do |participation, index|
+#   participation.completed = true
+#   participation.image = open(clip_art[index])
+#   participation.save
+# end
+
+p = Participation.find(3).completed = true
+p.image = open('http://s3.amazonaws.com/grouvie/participations/images/000/000/003/original/data?1458248731')
+p.save
+
+p = Participation.find(1).completed = true
+p.image = open('http://s3.amazonaws.com/grouvie/participations/images/000/000/001/original/data?1458248811')
+p.save
+
+p = Participation.find(2).completed = true
+p.image = open('http://s3.amazonaws.com/grouvie/participations/images/000/000/002/original/data?1458248979')
+p.save
+
+p = Participation.find(4).completed = true
+p.image = open('http://s3.amazonaws.com/grouvie/participations/images/000/000/002/original/data?1458248979')
+p.save
+
+p = Participation.find(7).completed = true
+p.image = open('http://s3.amazonaws.com/grouvie/participations/images/000/000/007/original/data?1458248761')
+p.save
+
+p = Participation.find(8).completed = true
+p.image = open('http://s3.amazonaws.com/grouvie/participations/images/000/000/008/original/data?1458248827')
+p.save
+
+p = Participation.find(6).completed = true
+p.image = open('http://s3.amazonaws.com/grouvie/participations/images/000/000/006/original/data?1458249035')
+p.save
+
+p = Participation.find(9).completed = true
+p.image = open('http://s3.amazonaws.com/grouvie/participations/images/000/000/009/original/open-uri20160317-3-102qrzc?1458248607')
+p.save
+
+p = Participation.find(10).completed = true
+p.image = open('http://s3.amazonaws.com/grouvie/participations/images/000/000/010/original/data?1458248852')
+p.save
+
