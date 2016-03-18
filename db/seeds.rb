@@ -141,39 +141,48 @@ alana.comments.create!(group: group6, content: "Yo")
 #   participation.save
 # end
 
-p = Participation.find(3).completed = true
+p = Participation.find(3)
+p.completed = true
 p.image = open('http://s3.amazonaws.com/grouvie/participations/images/000/000/003/original/data?1458248731')
 p.save
 
-p = Participation.find(1).completed = true
+p = Participation.find(1)
+p.completed = true
 p.image = open('http://s3.amazonaws.com/grouvie/participations/images/000/000/001/original/data?1458248811')
 p.save
 
-p = Participation.find(2).completed = true
+p = Participation.find(2)
+p.completed = true
 p.image = open('http://s3.amazonaws.com/grouvie/participations/images/000/000/002/original/data?1458248979')
 p.save
 
-p = Participation.find(4).completed = true
+p = Participation.find(4)
+p.completed = true
 p.image = open('http://s3.amazonaws.com/grouvie/participations/images/000/000/002/original/data?1458248979')
 p.save
 
-p = Participation.find(7).completed = true
+p = Participation.find(7)
+p.completed = true
 p.image = open('http://s3.amazonaws.com/grouvie/participations/images/000/000/007/original/data?1458248761')
 p.save
 
-p = Participation.find(8).completed = true
+p = Participation.find(8)
+p.completed = true
 p.image = open('http://s3.amazonaws.com/grouvie/participations/images/000/000/008/original/data?1458248827')
 p.save
 
-p = Participation.find(6).completed = true
+p = Participation.find(6)
+p.completed = true
 p.image = open('http://s3.amazonaws.com/grouvie/participations/images/000/000/006/original/data?1458249035')
 p.save
 
-p = Participation.find(9).completed = true
+p = Participation.find(9)
+p.completed = true
 p.image = open('http://s3.amazonaws.com/grouvie/participations/images/000/000/009/original/open-uri20160317-3-102qrzc?1458248607')
 p.save
 
-p = Participation.find(10).completed = true
+p = Participation.find(10)
+p.completed = true
 p.image = open('http://s3.amazonaws.com/grouvie/participations/images/000/000/010/original/data?1458248852')
 p.save
 
