@@ -40,7 +40,7 @@ ray = User.create!(username: 'ray', password: 'password', email: 'ray@mail.com')
 catie = User.create!(username: 'catie', password: 'password', email: 'catie@mail.com')
 
 group = marshall.created_groups.create(name: 'Team Grouvie')
-group2 = mike.created_groups.create(name: 'Squirrels')
+group2 = mike.created_groups.create(name: 'Study Group')
 group3 = alana.created_groups.create(name: 'Speed Racers')
 group4 = marshall.created_groups.create(name: 'HS Friends')
 group5 = lauren.created_groups.create(name: 'La Familia')
@@ -56,31 +56,31 @@ group6.members << [mike, alana, lauren, dan, tiffany]
 
 challenge1 = group.challenges.create!(name: 'Learn React Native', description: 'Dive into the docs and learn all there is to know!', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 20))
 challenge2 = group.challenges.create!(name: 'Build an App', description: 'Create an app using Rails and React Native to help its users reach goals / take selfies', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 20))
-challenge3 = group.challenges.create!(name: 'Perfect the fast-to-slow clap', description: 'And then add to resume skills.', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 20))
-challenge4 = group.challenges.create!(name: 'Vacuum the ROR', description: 'Vacuum the entire room and the chairs', start_date: Date.new(2016, 3, 15), end_date: Date.new(2016, 03, 25))
-challenge5 = group.challenges.create!(name: 'Demo App!', description: 'Show your creation to the masses.', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 20))
+challenge3 = group.challenges.create!(name: 'Perfect the fast-to-slow clap', description: 'And then add to resume skills.', start_date: Date.new(2016, 3, 01), end_date: Date.new(2016, 05, 01))
+challenge4 = group.challenges.create!(name: 'Vacuum the ROR', description: 'Vacuum the entire room and the chairs', start_date: Date.new(2016, 4, 15), end_date: Date.new(2016, 04, 25))
+challenge5 = group.challenges.create!(name: 'Demo App!', description: 'Show your creation to the masses.', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 04, 22))
 
-challenge6 = group2.challenges.create!(name: 'Graduate', description: 'But stay in touch.', start_date: Date.new(2016, 1, 18), end_date: Date.new(2016, 03, 25))
-challenge7 = group2.challenges.create!(name: 'Do a donut crawl', description: 'Heart donuts', start_date: Date.new(2016, 3, 18), end_date: Date.new(2016, 03, 20))
-challenge8 = group2.challenges.create!(name: 'Perfect the fast-to-slow clap', description: 'And then add to resume skills.', start_date: Date.new(2016, 3, 10), end_date: Date.new(2017, 03, 10))
+challenge6 = group2.challenges.create!(name: 'Graduate', description: 'But stay in touch.', start_date: Date.new(2016, 1, 18), end_date: Date.new(2016, 05, 25))
+challenge7 = group2.challenges.create!(name: 'Do a donut crawl', description: 'Heart donuts', start_date: Date.new(2016, 3, 18), end_date: Date.new(2016, 05, 20))
+challenge8 = group2.challenges.create!(name: 'Watch Lecture', description: 'And then add to resume skills.', start_date: Date.new(2016, 3, 10), end_date: Date.new(2017, 05, 10))
 
 
-challenge9 = group3.challenges.create!(name: 'Run 3 times this week', description: 'Take a run of 20+ minutes 3 times this week', start_date: Date.new(2016, 3, 16), end_date: Date.new(2016, 03, 23))
-challenge10 = group3.challenges.create!(name: 'Swim 100 laps in the pool', description: 'Get fit', start_date: Date.new(2016, 3, 16), end_date: Date.new(2016, 03, 23))
-challenge11 = group3.challenges.create!(name: 'Get 100,000 steps on pedometer this week', description: 'Walk a lot', start_date: Date.new(2016, 3, 15), end_date: Date.new(2016, 03, 22))
+challenge9 = group3.challenges.create!(name: 'Run 3 times this week', description: 'Take a run of 20+ minutes 3 times this week', start_date: Date.new(2016, 4, 16), end_date: Date.new(2016, 04, 23))
+challenge10 = group3.challenges.create!(name: 'Swim 100 laps in the pool', description: 'Get fit', start_date: Date.new(2016, 4, 16), end_date: Date.new(2016, 04, 23))
+challenge11 = group3.challenges.create!(name: 'Get 100,000 steps on pedometer this week', description: 'Walk a lot', start_date: Date.new(2016, 4, 15), end_date: Date.new(2016, 04, 22))
 
 challenge12 = group4.challenges.create!(name: 'Book tickets to France', description: 'Prices will go up', start_date: Date.new(2016, 3, 01), end_date: Date.new(2016, 05, 01))
-challenge13 = group4.challenges.create!(name: 'Reserve Pat Green tickets', description: 'Theyre going to sell out', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 31))
+challenge13 = group4.challenges.create!(name: 'Reserve Pat Green tickets', description: 'Theyre going to sell out', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 04, 30))
 challenge14 = group4.challenges.create!(name: 'Read the 2nd chapter of that book', description: 'And then add to resume skills.', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 20))
 challenge15 = group4.challenges.create!(name: 'Fill out common app', description: 'Its almost due', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 04, 01))
 
-challenge16 = group5.challenges.create!(name: 'Get your flu shot', description: 'It actually matters.', start_date: Date.new(2016, 3, 13), end_date: Date.new(2016, 03, 20))
-challenge17 = group5.challenges.create!(name: 'Call Grandma this week', description: 'She would really appreciate it', start_date: Date.new(2016, 3, 15), end_date: Date.new(2016, 03, 21))
-challenge18 = group5.challenges.create!(name: 'Share a funny picture this week!', description: 'Stay in touch yall', start_date: Date.new(2016, 3, 14), end_date: Date.new(2016, 03, 21))
-challenge19 = group5.challenges.create!(name: 'Clean up the bathroom', description: 'It is gross.', start_date: Date.new(2016, 3, 17), end_date: Date.new(2016, 03, 19))
+challenge16 = group5.challenges.create!(name: 'Get your flu shot', description: 'It actually matters.', start_date: Date.new(2016, 3, 13), end_date: Date.new(2016, 04, 22))
+challenge17 = group5.challenges.create!(name: 'Call Grandma this week', description: 'She would really appreciate it', start_date: Date.new(2016, 4, 15), end_date: Date.new(2016, 04, 21))
+challenge18 = group5.challenges.create!(name: 'Share a funny picture this week!', description: 'Stay in touch yall', start_date: Date.new(2016, 4, 14), end_date: Date.new(2016, 04, 21))
+challenge19 = group5.challenges.create!(name: 'Clean up the bathroom', description: 'It is gross.', start_date: Date.new(2016, 3, 17), end_date: Date.new(2016, 04, 22))
 
 challenge20 = group6.challenges.create!(name: 'Vote in your primary', description: 'It actually matters.', start_date: Date.new(2016, 2, 10), end_date: Date.new(2016, 05, 18))
-challenge21 = group6.challenges.create!(name: 'Sign up for Soccer', description: 'Just do it', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 31))
+challenge21 = group6.challenges.create!(name: 'Sign up for Soccer', description: 'Just do it', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 05, 01))
 
 
 challenge1.participants << [alana, marshall, mike, lauren]
