@@ -54,10 +54,10 @@ group5.members << [alana, marshall, mike, mom, dad]
 group6.members << [mike, alana, lauren, dan, tiffany]
 
 
-challenge1 = group.challenges.create!(name: 'Learn React Native', description: 'Dive into the docs and learn all there is to know!', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 20))
-challenge2 = group.challenges.create!(name: 'Build an App', description: 'Create an app using Rails and React Native to help its users reach goals / take selfies', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 03, 20))
+challenge1 = group.challenges.create!(name: 'Complete React-Native Tutorial', description: 'Dive into the docs and learn all there is to know!', start_date: Date.new(2016, 4, 01), end_date: Date.new(2016, 04, 30))
+challenge2 = group.challenges.create!(name: 'Watch Egghead.io Videos', description: 'This will help us learn about our app', start_date: Date.new(2016, 4, 15), end_date: Date.new(2016, 04, 20))
 challenge3 = group.challenges.create!(name: 'Perfect the fast-to-slow clap', description: 'And then add to resume skills.', start_date: Date.new(2016, 3, 01), end_date: Date.new(2016, 05, 01))
-challenge4 = group.challenges.create!(name: 'Vacuum the ROR', description: 'Vacuum the entire room and the chairs', start_date: Date.new(2016, 4, 15), end_date: Date.new(2016, 04, 25))
+challenge4 = group.challenges.create!(name: 'Vacuum the Great Hall', description: 'Vacuum the entire room and the chairs', start_date: Date.new(2016, 4, 15), end_date: Date.new(2016, 04, 25))
 challenge5 = group.challenges.create!(name: 'Demo App!', description: 'Show your creation to the masses.', start_date: Date.new(2016, 3, 10), end_date: Date.new(2016, 04, 22))
 
 challenge6 = group2.challenges.create!(name: 'Graduate', description: 'But stay in touch.', start_date: Date.new(2016, 1, 18), end_date: Date.new(2016, 05, 25))
@@ -110,10 +110,8 @@ challenge19.participants << [dad, mike, marshall]
 challenge20.participants << [mike, alana, lauren]
 challenge21.participants << [dan, alana, lauren]
 
-alana.comments.create!(group: group, content: 'these docs are so confusing!')
-lauren.comments.create!(group: group, content: "Errors amiright?")
+alana.comments.create!(group: group, content: 'React-Native is so cool!!')
 
-mike.comments.create!(group: group, content: "Guys the ROR really needs to be vacuumed")
 tiffany.comments.create!(group: group2, content: "Amazing!")
 
 alana.comments.create!(group: group3, content: "Already ran twice. Come on guys")
